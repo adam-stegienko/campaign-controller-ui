@@ -4,9 +4,9 @@ def getLatestDockerTag(registry, imageName, majorMinor, credFile) {
         def tagsJson = sh(
             returnStdout: true,
             script: """
-            curl -s --netrc-file ${credFile} https://${registry}/v2/${imageName}/tags/list | \
+            curl -sSf --netrc-file ${credFile} https://${registry}/v2/${imageName}/tags/list || echo '{"tags":[]}' | \
             jq -r '.tags // [] | .[]' | \
-            grep -E '^${majorMinor}\\.[0-9]+' | \
+            grep -E '^${majorMinor}\\.[0-9]+' || true | \
             sort -V | \
             tail -n 1
             """
