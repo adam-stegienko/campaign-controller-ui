@@ -27,3 +27,70 @@
 .google-responsive tr:hover {
     background-color: #eaeaea;
 }
+
+.google-action-error {
+    color: #c0392b;
+    background-color: #fdecea;
+    border: 1px solid #e74c3c;
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.campaign-status {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.campaign-status--enabled {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.campaign-status--paused {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.campaign-status--removed {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.campaign-toggle-btn {
+    padding: 5px 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: opacity 0.2s;
+}
+
+.campaign-toggle-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.campaign-toggle-btn--disable {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.campaign-toggle-btn--disable:hover:not(:disabled) {
+    background-color: #c0392b;
+}
+
+.campaign-toggle-btn--enable {
+    background-color: #27ae60;
+    color: #fff;
+}
+
+.campaign-toggle-btn--enable:hover:not(:disabled) {
+    background-color: #1e8449;
+}
